@@ -23,7 +23,6 @@ ADD run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 RUN rm -rf /var/lib/postgresql/9.2/main
 
-VOLUME ["/var/lib/postgresql"]
 EXPOSE 5432
 CMD ["/usr/local/bin/run"]
 
