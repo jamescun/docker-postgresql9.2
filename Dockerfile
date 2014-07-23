@@ -3,6 +3,7 @@ MAINTAINER James Cunningham <tetrauk@gmail.com>
 
 # Generate Locale
 RUN locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
+RUN apt-get update
 
 # Install Official PostgreSQL Repo
 RUN apt-get install -qqy wget
