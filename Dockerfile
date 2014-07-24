@@ -6,7 +6,7 @@ RUN locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
 RUN apt-get update
 
 # Install Official PostgreSQL Repo
-RUN apt-get install -qqy wget
+RUN apt-get install -qqy wget sudo
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 RUN wget --quiet --no-check-certificate -O /tmp/ACCC4CF8.asc https://www.postgresql.org/media/keys/ACCC4CF8.asc && apt-key add /tmp/ACCC4CF8.asc
 RUN apt-get update
